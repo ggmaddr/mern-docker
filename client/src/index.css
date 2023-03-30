@@ -14,45 +14,46 @@ label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 input {
   font: inherit;
   padding: 1rem;
-  border: 1px solid #ccc;
+  border: 5px solid #2cfff1;
+  background: #fff6c3;
   font-size: 1.5rem;
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   border-radius: 30px;
   text-align: center;
   color: #242424;
+  transition: 0.3s;
 }
 
 input:focus {
   outline: none;
-  border-color: #6e0040;
-  background-color: #ffdffb;
+  border-color: #2caeff;
+  background-color: aliceblue;
 }
 
 button {
   font: inherit;
-  background-color: white;
-  color: black;
+  background: none;
+  color: aliceblue;
   border: 0px;
   padding: 0.8rem 1.8rem;
+  margin: 1rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   transition: 0.3s;
-  box-shadow: 0.3em 0.3em 0 0 #2cb9ff,
-    inset 0.3em 0.3em 0 0 #2cb9ff;
+  box-shadow: 0.3em 0.3em 0 0 #2cfff1,
+    inset 0.3em 0.3em 0 0 #2cfff1;
 }
 
 button:hover,
 button:active {
-  background-color: #b80e71;
-  border-color: #b80e71;
-  box-shadow: 0 0 0 0 rgb(0, 218, 138), inset 6em 3.5em 0 0 rgb(0, 218, 138);
-  color: white;
+  box-shadow: 0 0 0 0 #2caeff, inset 6em 3.5em 0 0 #2caeff;
+  color: aliceblue;
 }
