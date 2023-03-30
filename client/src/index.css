@@ -8,8 +8,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #383838;
-}
+  background: linear-gradient(90deg, rgba(255,244,99,1) 0%, rgba(255,178,118,1) 35%, rgba(255,144,254,1) 100%);}
 
 label {
   font-weight: bold;
@@ -34,22 +33,26 @@ input {
 input:focus {
   outline: none;
   border-color: #6e0040;
-  background-color: #ffdff2;
+  background-color: #ffdffb;
 }
 
 button {
   font: inherit;
-  background-color: #6e0040;
-  color: white;
-  border: 1px solid #6e0040;
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem;
+  background-color: white;
+  color: black;
+  border: 0px;
+  padding: 0.8rem 1.8rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  box-shadow: 0.3em 0.3em 0 0 #2cb9ff,
+    inset 0.3em 0.3em 0 0 #2cb9ff;
 }
 
 button:hover,
 button:active {
   background-color: #b80e71;
   border-color: #b80e71;
+  box-shadow: 0 0 0 0 rgb(0, 218, 138), inset 6em 3.5em 0 0 rgb(0, 218, 138);
+  color: white;
 }
