@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './CourseGoals.css';
 import Card from '../UI/Card';
 import GoalItem from './GoalItem';
