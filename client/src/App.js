@@ -108,6 +108,7 @@ function App() {
       {!isLoading && (
         <CourseGoals goals={loadedGoals} onDeleteGoal={deleteGoalHandler} />
       )}
+      <footer>© 2023 GGMADDR. All Rights Reserved by @GGMADDR (Grady)</footer>
     </div>
   );
 }
