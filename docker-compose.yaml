@@ -5,15 +5,15 @@ services:
     volumes: 
       - data:/data/db
     # environment: 
-    #   MONGO_INITDB_ROOT_USERNAME: max
-    #   MONGO_INITDB_ROOT_PASSWORD: secret
-      # - MONGO_INITDB_ROOT_USERNAME=max
+    #   MONGO_INITDB_ROOT_USERNAME: ggmaddr
+    #   MONGO_INITDB_ROOT_PASSWORD: passgg
+      # - MONGO_INITDB_ROOT_USERNAME=ggmaddr
     env_file: 
       - ./env/mongo.env
-  backend:
-    build: ./backend
+  server:
+    build: ./server
     # build:
-    #   context: ./backend
+    #   context: ./server
     #   dockerfile: Dockerfile
     #   args:
     #     some-arg: 1
@@ -21,22 +21,25 @@ services:
       - '80:80'
     volumes: 
       - logs:/app/logs
-      - ./backend:/app
+      - ./server:/app
       - /app/node_modules
     env_file: 
-      - ./env/backend.env
+      - ./env/server.env
     depends_on:
       - mongodb
-  frontend:
-    build: ./frontend
+  client:
+    build: ./client
     ports: 
       - '3000:3000'
     volumes: 
-      - ./frontend/src:/app/src
+      - ./client:/app
+      - /app/node_modules
+    #this service needs open input connection
     stdin_open: true
+    # = -it
     tty: true
     depends_on: 
-      - backend
+      - server
 
 volumes: 
   data:
